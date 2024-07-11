@@ -1,0 +1,5 @@
+code/__pycache__/
+data/
+logs/
+test/
+.DS_Store
