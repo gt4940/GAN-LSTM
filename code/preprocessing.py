@@ -78,27 +78,3 @@ def make_dataset(x, y):
     labels_dataset = tf.data.Dataset.from_tensor_slices(labels)
     dataset = tf.data.Dataset.zip((features_dataset, labels_dataset))
     return dataset
-
-##################################################################
-
-
-"""def make_train_dataset(dds, gen):
-    S_gen, T_gen = data_gen()
-    S_dds, T_dds = data_dds('train')
-
-    S_gen, T_gen = S_gen[:gen], T_gen[:gen]
-    S_dds, T_dds = S_dds[:dds], T_dds[:dds]
-
-    X_train = np.concatenate((S_gen, S_dds), axis=0)
-    Y_train = np.concatenate((T_gen, T_dds), axis=0)
-    dataset = make_dataset(X_train, Y_train).shuffle(BUFFER_SIZE).batch(BATCH_SIZE)
-    return dataset
-
-def make_vaild_dataset():
-    S_dds, T_dds = data_dds('valid')
-    dataset = make_dataset(S_dds, T_dds).batch(BATCH_SIZE)
-    return dataset
-
-def make_test_data():
-    S_dds, T_dds = data_dds('test')
-    return S_dds, T_dds"""

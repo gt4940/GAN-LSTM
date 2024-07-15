@@ -48,7 +48,7 @@ def make_discriminator_model():
 
 def make_LSTM_model():
     model = tf.keras.Sequential()
-    model.add(tf.keras.layers.LSTM(256, input_shape=(1024, 2), return_sequences=True))
+    model.add(tf.keras.layers.LSTM(256, input_shape=(300, 2), return_sequences=True))
     model.add(tf.keras.layers.LSTM(256))
     model.add(tf.keras.layers.Dense(1, activation='relu'))
     return model
